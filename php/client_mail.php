@@ -49,14 +49,14 @@
   $clientEmail->SMTPAuth = true;
 
   //Username to use for SMTP authentication - use full email address for gmail
-  $clientEmail->Username = 'sunsetmovingsolutions@gmail.com';
+  $clientEmail->Username = '';
 
   //Password to use for SMTP authentication
-  $clientEmail->Password = 'ljjrbklwozekwldu';
-  $clientEmail->SetFrom('sunsetmovingsolutions@gmail.com', 'Sunset Cotizator'); //Name is optional
+  $clientEmail->Password = '';
+  $clientEmail->SetFrom('', 'Sunset Quote'); //Name is optional
   //Set an alternative reply-to address
-  $clientEmail->addReplyTo('info@sunsetmovingsolutions.com', 'Sunset Information');
-  $clientEmail->Subject   = 'Cotization resume';
+  $clientEmail->addReplyTo('', 'Sunset Information');
+  $clientEmail->Subject   = 'Quotation resume';
   $clientEmail->IsHTML(true);
   $clientEmail->Body = $bodyClient;
   $clientEmail->AltBody = $bodyClient;

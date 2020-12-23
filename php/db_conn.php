@@ -85,19 +85,19 @@
   $providerEmail->SMTPAuth = true;
 
   //Username to use for SMTP authentication - use full email address for gmail
-  $providerEmail->Username = 'sunsetmovingsolutions@gmail.com';
+  $providerEmail->Username = '';
 
   //Password to use for SMTP authentication
-  $providerEmail->Password = 'ljjrbklwozekwldu';
-  $providerEmail->SetFrom('sunsetmovingsolutions@gmail.com', 'Sunset Cotizator'); //Name is optional
-  $providerEmail->Subject   = 'Cotization resume';
+  $providerEmail->Password = '';
+  $providerEmail->SetFrom('', 'Sunset Quote'); //Name is optional
+  $providerEmail->Subject   = 'Quotation resume';
   $providerEmail->IsHTML(true);
   $providerEmail->Body = $body;
   $providerEmail->AltBody = $body;
-  $providerEmail->AddAddress( 'ever.giraldo@gmail.com' );
+  $providerEmail->AddAddress( '' );
 
   $file_to_attach = $img_url;
 
-  $providerEmail->AddAttachment( $file_to_attach , 'Cotization.jpeg' );
+  $providerEmail->AddAttachment( $file_to_attach , 'Quotation.jpeg' );
   $providerEmail->Send();
 ?>
